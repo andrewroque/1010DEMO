@@ -1,0 +1,51 @@
+* {
+    background-color: teal;
+
+}
+
+body {
+  height: 100vh;
+  cursor: url(/img/rect.svg), auto;
+  cursor: none; 
+}
+
+.cursor {
+  width: 1em;
+  height: 1em;
+  border: 2px solid teal;
+  color: black;
+  /* border-radius: 50%; */
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* transition-duration: 200ms;
+    transition-timing-function: ease-out; */
+}
+
+.container {
+    background-color: teal;
+    display: flex;
+    height: 2000px;
+    width: 100vw;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+.box {
+    height: 500px;
+    width: 500px;
+    background-color: goldenrod;
+    border: 3px red;
+    padding-top: 100px;
+
+}
+
+
+
+
+.img {
+    height: 400px;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
