@@ -1,6 +1,4 @@
-let mouseCursor = document.querySelector(".cursor");
-let navLinks = document.querySelectorAll(.nav-links li');
+alert("HELLO");
 
-window.addEventListener('mousemove', cursor);
-
-fuction cursor(e){}
+new cursoreffects.ghostCursor();
+new cursoreffects.fairyDustCursor({colors: ["#ff0000", "#00ff00", "#0000ff"]});
