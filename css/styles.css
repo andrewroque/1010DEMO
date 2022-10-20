@@ -1,6 +1,42 @@
 * {
-  background-color: teal;
+  background-color: rgb(222, 211, 172);
+  /* background: linear-gradient(45deg, red, blue); */
   font-family: 'BIZ UDMincho', serif;
+}
+
+.title1 {  
+  font-size: 500px;
+  text-align: center;
+  color: rgb(220, 220, 220);
+  -webkit-text-stroke: 8px rgba(8, 77, 78, 0.991);
+  position: flex;
+  z-index: 3;
+  /* background-color: transparent; */
+  border: none;
+
+}
+
+.subtitle {
+  width: 100%;
+  justify-content: center;
+  position: flex;
+  z-index: 2;
+  background-color: transparent;
+  align-items: center;
+}
+
+.textbox {
+  width: 800px;
+  font-size: 150px;
+  -webkit-text-stroke: 5px white;
+  background-color: transparent;
+  border: 2px red solid;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+
 }
 
 body {
@@ -10,20 +46,55 @@ body {
   font-family: 'BIZ UDMincho', serif;
 }
 
+.halftone {
+	--mask: linear-gradient rgba(222, 211, 172, 0.5), rgb(0 0 0 / 0.5));
+	--stop1: 5%;
+	--stop2: 90%;
+	
+	aspect-ratio: 1;
+	position: relative;
+	background: white;
+	filter: contrast(50);
+  mix-blend-mode: var(--blendMode, multiply);
+}
+
+.halftone::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-image: radial-gradient(circle at center, rgb(0, 0, 0) var(--stop1), transparent var(--stop2));
+	background-size: 1rem 1rem;
+	background-repeat: round;
+	background-position: center;
+	border: 4px solid;
+	mask-image: var(--mask);
+}
+
+.halftone:nth-child(even)::after {
+	--bgSize: 1.4rem;
+	--bgPosition: calc(var(--bgSize) / 2);
+	--stop1: 3%;
+	--stop2: 65%;
+	
+	background-image: radial-gradient(circle at center, rgb(0, 0, 0) var(--stop1), transparent var(--stop2)), radial-gradient(circle at center, black var(--stop1), transparent var(--stop2));
+	background-size: var(--bgSize) var(--bgSize);
+	background-position: 0 0, var(--bgPosition) var(--bgPosition);
+}
+
 .cursor {
   width: 1em;
   height: 1em;
-  /* border: 5px solid black; */
+  border: 5px solid black;
   background-color: black;
   /* border-radius: 50%; */
   position: absolute;
   transform: translate(-50%, -50%);
-  /* transition-duration: 200ms;
-    transition-timing-function: ease-out; */
+  transition-duration: 100ms;
+  transition-timing-function: ease-out;
 }
 
 .container {
-  background-color: teal;
+  /* background-color: teal; */
   display: flex;
   height: 2000px;
   width: 100vw;
@@ -31,35 +102,43 @@ body {
   flex-direction: column;
 }
 .rect {
-  height: 500px;
-  width: 500px;
+  background: linear-gradient(90deg, goldenrod, rgb(28, 81, 70));
+  height: 1200px;
+  width: 800px;
   background-color: goldenrod;
   border: 6px red;
   padding-top: 100px;
 }
 
-.grid {
+.gridbox {
   width: 100%;
-  height: 2000px;
-  background-color: bisque;
-  display: grid;
-  grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.box {
-  /* width: 50px;
-    height: 50px; */
-  background-color: red;
-  border: 2px dodgerblue solid;
+.grid {
+  width: 50%;
+  height: 2000px;
+  background-color: rgb(222, 211, 172);
+  display: grid;
+  grid-template: repeat(16, 1fr) / repeat(15, 1fr);
+  /* align-items: center;
+  justify-content: center; */
 }
 
 .a {
   /* grid-column: 1; */
+  /* width: 8em; */
+  /* height: 6em; */
   background-color: black;
 }
 
 .b {
-  background-color: rgb(255, 183, 0);
-  border: 2px rgb(253, 0, 245) solid;
+  /* width: 6em;
+  height: 6em; */
+  background-color: transparent;
+  /* border: 2px rgb(253, 0, 245) solid; */
 }
 
 .img {
@@ -69,28 +148,19 @@ body {
 }
 
 .GX500050 {
-    font-size: 700px;
-    border: 2px gold solid;
-    stroke: 2px gold solid;
-    -webkit-text-stroke: 5px gold;
-    -webkit-text-fill-color: rgb(236, 236, 236);
+    font-size: 600px;
+    /* border: 2px gold solid; */
+    -webkit-text-stroke: 8px rgb(2, 74, 74);
+    color: rgb(220, 220, 220);
     transform: rotate(90deg);
     background-color: transparent;
-}
-
-.grit {
-    -webkit-mask-image: url("/img/scannertexture.png");
     mask-image: url("/img/scannertexture.png");
+    -webkit-mask-image: url("/img/scannertexture.png");
 }
 
-.title {
-    font-size: 200px;
-    text-align: center;
-    -webkit-text-stroke: 5px white;
-    position: absolute;
-    z-index: 2;
-    background-color: transparent;
-}
+
+
+
 
 /* add line breaks
     ex[plore grit */
