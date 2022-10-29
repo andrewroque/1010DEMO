@@ -19,10 +19,11 @@
 .subtitle {
   width: 100%;
   justify-content: center;
-  position: flex;
-  z-index: 2;
-  background-color: transparent;
+  display: flex;
+  /* z-index: 2; */
+  /* background-color: transparent; */
   align-items: center;
+  background-color:blue;
 }
 
 .textbox {
@@ -30,11 +31,13 @@
   font-size: 150px;
   -webkit-text-stroke: 5px white;
   background-color: transparent;
-  border: 2px red solid;
+  /* border: 2px red solid; */
   position: absolute;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 1000px;
   
 
 }
@@ -47,14 +50,14 @@ body {
 }
 
 .halftone {
-	--mask: linear-gradient rgba(222, 211, 172, 0.5), rgb(0 0 0 / 0.5));
+	--mask: linear-gradient rgba(222, 211, 172, 0.5), rgb(0 0 0 / 0.5);
 	--stop1: 5%;
-	--stop2: 90%;
+	--stop2: 80%;
 	
 	aspect-ratio: 1;
 	position: relative;
 	background: white;
-	filter: contrast(50);
+	filter: contrast(20);
   mix-blend-mode: var(--blendMode, multiply);
 }
 
@@ -105,7 +108,7 @@ body {
   background: linear-gradient(90deg, goldenrod, rgb(28, 81, 70));
   height: 1200px;
   width: 800px;
-  background-color: goldenrod;
+  /* background-color: goldenrod; */
   border: 6px red;
   padding-top: 100px;
 }
