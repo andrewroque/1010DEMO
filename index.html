@@ -14,9 +14,8 @@
       rel="stylesheet"
     />
 
-    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
-
     <script src="app.js"></script>
+    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
 
     <title>GX500050</title>
   </head>
@@ -25,6 +24,7 @@
 
   <body>
     <div class="cursor"></div>
+    <button onclick="myFunction()">BUTTON</button>
     <div class="title1">KRUPS</div>
     <div class="subtitle">
       <div class="textbox">A Mediocre's Guide to Grinding Coffee</div>
@@ -313,7 +313,7 @@
       </div>
     </div>
 
-    <script>
+    <!-- <script>
       const cursor = document.querySelector(".cursor");
 
       document.addEventListener("mousemove", (e) => {
@@ -322,8 +322,32 @@
           "top: " + e.pageY + "px; left: " + e.pageX + "px;"
         );
       });
+    </script> -->
+
+    <script>
+      // new cursoreffects.rainbowCursor({length: 10, colors: ['red', 'blue'], size: 20});
+      // new cursoreffects.rainbowCursor({ element: document.querySelector("#rainbow") })
+      // new cursoreffects.fairyDustCursor({
+      //   colors: ["#000000", "#000000", "#000000"],
+      // });
+      // new cursoreffects.ghostCursor({ element: document.querySelector("#cursor") })
+      // new cursoreffects.trailingCursor({ element: document.querySelector("#trailing")})
+      // new cursoreffects.followingDotCursor({ element: document.querySelector("#following") })
+      // new cursoreffects.springyEmojiCursor({ element: document.querySelector("#springs") });
+      // new cursoreffects.emojiCursor({ element: document.querySelector("#emoji") })
+      // new cursoreffects.emojiCursor({ element: document.querySelector("🔥") })
+      // import { emojiCursor } from 'cursor-effects';
+      // new emojiCursor({ emoji: ["🔥", "🐬", "🦆"] });
+      // new cursoreffects.bubbleCursor({ element: document.querySelector("#bubbles") })
+      // new cursoreffects.snowflakeCursor({colors: ["000000"]});
+      // new cursoreffects.clockCursor({ element: document.querySelector("#clock") })
     </script>
 
-    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+    <script>
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
   </body>
 </html>
