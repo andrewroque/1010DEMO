@@ -13,6 +13,7 @@
   position: flex;
   z-index: 3;
   border: none;
+  padding-right: 500px;
 }
 
 /* .title1:hover {
@@ -48,8 +49,35 @@
 body {
   cursor: url(/img/rect.svg), auto;
   font-family: "BIZ UDMincho", serif;
-  /* background-color: blueviolet; */
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+  background-size: 100% 100%;
+  background-color: #e9e1e0;
+  animation: bg-color 30s infinite;
+  /* animation: gradient 10s ease infinite; */
+  backdrop-filter: opacity(10%);
 }
+
+@keyframes bg-color {
+  0% { background-color: #e9e1e0; }
+  20% { background-color: #c6afac; }
+  40% { background-color: #643001; }
+  60% { background-color: #BD7938; }
+  80% { background-color: #3A1C00; }
+  100% { background-color: #e9e1e0; }
+}
+/*   482a25
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 1% 51%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
 
 .cursor {
   /* cursor: url(/img/rect.svg), auto; */
@@ -74,6 +102,27 @@ body {
   flex-direction: column;
 }
 
+.rect {
+  background: rgb(1, 71, 71);
+  /* opacity: 0.70; */
+  height: 1200px;
+  width: 800px;
+  border: 6px red;
+  padding-top: 100px;
+}
+
+.rect:hover {
+  background-image: radial-gradient(
+      circle at center,
+      black 0.25rem,
+      transparent 0
+    ),
+    radial-gradient(circle at center, black 0.4rem, transparent 0.5);
+  background-size: 1.3rem 1.3rem;
+  background-position: 0 0, 0.65rem 0.65rem;
+}
+
+
 .GX500050container {
   /* background-color: teal; */
   display: flex;
@@ -97,26 +146,7 @@ body {
   font-size: 200px;
 } */
 
-.rect {
-  background: #614909;
-  opacity: 0.99;
-  height: 1200px;
-  width: 800px;
-  /* background-color: goldenrod; */
-  border: 6px red;
-  padding-top: 100px;
-}
 
-.rect:hover {
-  background-image: radial-gradient(
-      circle at center,
-      black 0.25rem,
-      transparent 0
-    ),
-    radial-gradient(circle at center, black 0.4rem, transparent 0.5);
-  background-size: 1.3rem 1.3rem;
-  background-position: 0 0, 0.65rem 0.65rem;
-}
 
 .gridbox {
   width: 100%;
@@ -162,18 +192,6 @@ body {
 .dark-mode {
   background-color: rgb(0, 0, 0);
   filter: invert(100%);
-  background-image: radial-gradient(
-      circle at center,
-      rgb(0, 0, 0) 0.25rem,
-      transparent 0
-    ),
-    radial-gradient(
-      circle at center,
-      rgba(255, 213, 0, 0.765) 0.4rem,
-      transparent 0
-    );
-  background-size: 1.3rem 1.3rem;
-  background-position: 0 0, 0.65rem 0.65rem;
 }
 
 button {
