@@ -7,6 +7,7 @@
     -webkit-text-stroke: 8px rgba(8, 77, 78, 0.991);
     writing-mode: vertical-rl;
     text-orientation: upright;
+    /* line-height: 50%; */
     /* position: absolute; */
     /* margin-left: 100px; */
   }
@@ -111,7 +112,10 @@
   }
 
   .grid {
-    width: 100vw;
+    width: 75vw;
+  }
+  .a .b {
+    height: 400px;
   }
   .media:after {
     content: " 1200px < width < 1500px";
