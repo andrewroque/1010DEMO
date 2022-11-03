@@ -12,14 +12,13 @@
   justify-content: center;
   position: flex;
   z-index: 3;
-  /* background-color: transparent; */
   border: none;
 }
 
-.title1:hover {
+/* .title1:hover {
   font-size: 200px;
 
-}
+} */
 
 .subtitle {
   width: 100%;
@@ -30,8 +29,6 @@
   align-items: center;
   /* background-color:blue; */
 }
-
-
 
 .textbox {
   width: 800px;
@@ -45,6 +42,7 @@
   justify-content: center;
   text-align: center;
   margin-top: 1000px;
+  z-index: 2;
 }
 
 body {
@@ -76,8 +74,32 @@ body {
   flex-direction: column;
 }
 
+.GX500050container {
+  /* background-color: teal; */
+  display: flex;
+  height: 1500px;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+}
+
+.GX500050 {
+  font-size: 600px;
+  /* border: 2px gold solid; */
+  -webkit-text-stroke: 8px rgb(2, 74, 74);
+  color: rgb(220, 220, 220);
+  transform: rotate(90deg);
+  /* background-color: blue; */
+}
+/* 
+.GX500050:hover {
+  font-size: 200px;
+} */
+
 .rect {
   background: #614909;
+  opacity: 0.99;
   height: 1200px;
   width: 800px;
   /* background-color: goldenrod; */
@@ -87,13 +109,13 @@ body {
 
 .rect:hover {
   background-image: radial-gradient(
-    circle at center,
-    black 0.25rem,
-    transparent 0
-  ), radial-gradient(circle at center, black 0.4rem, transparent 0);
-background-size: 1.3rem 1.3rem;
-background-position: 0 0, 0.65rem 0.65rem;
-
+      circle at center,
+      black 0.25rem,
+      transparent 0
+    ),
+    radial-gradient(circle at center, black 0.4rem, transparent 0.5);
+  background-size: 1.3rem 1.3rem;
+  background-position: 0 0, 0.65rem 0.65rem;
 }
 
 .gridbox {
@@ -109,7 +131,7 @@ background-position: 0 0, 0.65rem 0.65rem;
   height: 2000px;
   /* background-color: rgb(222, 211, 172); */
   display: grid;
-  grid-template: repeat(16, 1fr) / repeat(15, 1fr);
+  grid-template: repeat(20, 1fr) / repeat(15, 1fr);
   /* align-items: center;
   justify-content: center; */
 }
@@ -126,31 +148,15 @@ background-position: 0 0, 0.65rem 0.65rem;
   width: 300px;
 }
 
-
 .b {
   /* width: 6em;
   height: 6em; */
   background-color: transparent;
 }
 
-.b:hover{
-  background-color: goldenrod;
+.b:hover {
+  /* background-color: goldenrod; */
   width: 300px;
-}
-
-.GX500050 {
-  font-size: 600px;
-  /* border: 2px gold solid; */
-  -webkit-text-stroke: 8px rgb(2, 74, 74);
-  color: rgb(220, 220, 220);
-  transform: rotate(90deg);
-  background-color: transparent;
-}
-
-.GX500050:hover {
-  font-size: 200px;
-  /* background-color:cadetblue; */
-
 }
 
 .dark-mode {
@@ -160,10 +166,14 @@ background-position: 0 0, 0.65rem 0.65rem;
       circle at center,
       rgb(0, 0, 0) 0.25rem,
       transparent 0
-    ), radial-gradient(circle at center, rgba(255, 213, 0, 0.765) 0.4rem, transparent 0);
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(255, 213, 0, 0.765) 0.4rem,
+      transparent 0
+    );
   background-size: 1.3rem 1.3rem;
-  background-position: 0 0, 0.65rem 0.65rem;  
-
+  background-position: 0 0, 0.65rem 0.65rem;
 }
 
 button {
@@ -174,24 +184,22 @@ button {
   z-index: 3;
 }
 
-
 .halftone {
   background-image: radial-gradient(
       circle at center,
       black 0.25rem,
       transparent 0
-    ), radial-gradient(circle at center, black 0.25rem, transparent 0);
+    ),
+    radial-gradient(circle at center, black 0.25rem, transparent 0);
   background-size: 1.3rem 1.3rem;
   background-position: 0 0, 0.65rem 0.65rem;
 }
 
-
-@media only screen and (min-width: 0px) {
+/* @media only screen and (min-width: 0px) {
   .textbox {
     width: 800px;
     font-size: 80px;
     -webkit-text-stroke: 5px white;
-    /* background-color: red; */
     position: absolute;
     display: flex;
     align-items: center;
@@ -199,28 +207,38 @@ button {
     text-align: center;
     margin-top: 1000px;
   }
-  .media:after {
-    content: ' 0px < width < 760px';
-}
 
-@media only screen and (min-width: 768px) {
+  .title1 {
+    font-size: 300px;
+    -webkit-text-stroke: 8px rgba(8, 77, 78, 0.991);
+
+  }
+  .media:after {
+    content: ' 0px < width < 1200px';
+  }
+} */
+
+/* @media only screen and (min-width: 1200px) {
   .textbox {
     width: 800px;
     font-size: 150px;
     -webkit-text-stroke: 5px white;
-    /* background-color: rgb(93, 0, 255); */
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-top: 1000px;
+  }
+
+  .title1 {
+    font-size: 500px;
   }
 
   .grid {
     width: 100vw;
   }
   .media:after {
-    content: ' 760px < width < 1200px';
+    content: ' 1200px < width < 1500px';
   }
-}
+} */
